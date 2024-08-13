@@ -646,7 +646,7 @@ class Trainer(object):
         # Init Encoder-decoder model
         if 'bart' in args.enc_dec_model:
             self.bart_model = BartForConditionalGeneration.from_pretrained(args.enc_dec_model)
-        elif 'flan-t5' in args.enc_dec_model:
+        elif 'flan-t5' or 't5-base' in args.enc_dec_model:
             self.bart_model = T5ForConditionalGeneration.from_pretrained(args.enc_dec_model, torch_dtype=torch.bfloat16)
         elif 'mt5' in args.enc_dec_model:
             self.bart_model = MT5ForConditionalGeneration.from_pretrained(args.enc_dec_model, torch_dtype=torch.bfloat16)

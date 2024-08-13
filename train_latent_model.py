@@ -57,7 +57,7 @@ if __name__ == "__main__":
     parser.add_argument("--output_dir", type=str, default=None)
     parser.add_argument("--save_dir", type=str, default="saved_latent_models")
     parser.add_argument("--learning_rate", type=float, default=5e-5)
-    parser.add_argument("--num_train_steps", type=int, default=50000)
+    parser.add_argument("--num_train_steps", type=int, default=15000)
     parser.add_argument("--lr_schedule", type=str, default="linear")
     parser.add_argument("--lr_warmup_steps", type=int, default=500)
     parser.add_argument("--optimizer", type=str, default="adamw")

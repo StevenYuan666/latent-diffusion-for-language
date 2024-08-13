@@ -391,13 +391,13 @@ class Trainer(object):
                     accelerator.log(logs, step=self.step)
 
                 if self.step % self.eval_every == 0:
-                    self.validation()
-                    accelerator.wait_for_everyone()
+                    # self.validation()
+                    # accelerator.wait_for_everyone()
                     self.save()
-                    self.lm.train() 
+                    # self.lm.train()
 
                 pbar.update(1)
-        self.validation()
+        # self.validation()
         self.save()
 
         accelerator.print('training complete')
